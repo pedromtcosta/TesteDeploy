@@ -9,7 +9,7 @@ namespace TesteDeploy.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Funcionou!");
+            Console.WriteLine("Funcionou (2)!");
             Console.ReadKey();
         }
     }
