@@ -8,7 +8,6 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>TesteDeploy.Setup</OutputName>
     <OutputType>Package</OutputType>
-	<WixToolPath>..\WiX\</WixToolPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -32,6 +31,11 @@
       <RefTargetDir>INSTALLFOLDER</RefTargetDir>
     </ProjectReference>
   </ItemGroup>
+  <PropertyGroup>
+    <WixToolPath>$(SolutionDir)WiX\bin\</WixToolPath>
+    <WixTargetsPath>$(SolutionDir)WiX\SDK\Wix.ca.targets</WixTargetsPath>
+    <WixTasksPath>$(SolutionDir)WiX\wixtasks.dll</WixTasksPath>
+  </PropertyGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
   <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
