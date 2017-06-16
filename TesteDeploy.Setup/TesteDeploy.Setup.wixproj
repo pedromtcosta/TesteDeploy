@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>TesteDeploy.Setup</OutputName>
     <OutputType>Package</OutputType>
-	<WixToolPath>$(SourceCodeControlRoot)\WiX\</WixToolPath>
+	<WixToolPath>..\WiX\</WixToolPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
