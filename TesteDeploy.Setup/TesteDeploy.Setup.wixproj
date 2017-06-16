@@ -36,6 +36,9 @@
     <WixTargetsPath>$(WixToolPath)Wix.targets</WixTargetsPath>
     <WixTasksPath>$(WixToolPath)wixtasks.dll</WixTasksPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(BuildingInsideVisualStudio)' != 'true' ">
+    <SuppressValidation>true</SuppressValidation>
+  </PropertyGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
   <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
