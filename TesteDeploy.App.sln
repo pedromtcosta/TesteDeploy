@@ -9,6 +9,11 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "TesteDeploy.Setup", "TesteD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteDeploy.Installer", "TesteDeploy.Installer\TesteDeploy.Installer.csproj", "{8D2C9FCE-B14F-4727-A14B-5C939BE66778}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{7B9C46CB-07EE-48C0-89B4-CD5C0BDFAA5A}"
+	ProjectSection(SolutionItems) = preProject
+		create-sfx.bat = create-sfx.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
