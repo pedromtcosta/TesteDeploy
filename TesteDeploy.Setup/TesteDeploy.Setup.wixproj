@@ -33,8 +33,8 @@
   </ItemGroup>
   <PropertyGroup>
     <WixToolPath>$(SolutionDir)WiX\</WixToolPath>
-    <WixTargetsPath>$(SolutionDir)WiX\SDK\Wix.ca.targets</WixTargetsPath>
-    <WixTasksPath>$(SolutionDir)WiX\wixtasks.dll</WixTasksPath>
+    <WixTargetsPath>$(WixToolPath)Wix.targets</WixTargetsPath>
+    <WixTasksPath>$(WixToolPath)wixtasks.dll</WixTasksPath>
   </PropertyGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
