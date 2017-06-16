@@ -32,7 +32,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
-    <WixToolPath>$(SolutionDir)WiX\bin\</WixToolPath>
+    <WixToolPath>$(SolutionDir)WiX\</WixToolPath>
     <WixTargetsPath>$(SolutionDir)WiX\SDK\Wix.ca.targets</WixTargetsPath>
     <WixTasksPath>$(SolutionDir)WiX\wixtasks.dll</WixTasksPath>
   </PropertyGroup>
